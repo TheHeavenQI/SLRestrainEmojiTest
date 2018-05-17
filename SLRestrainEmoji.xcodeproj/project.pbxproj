@@ -12,8 +12,8 @@
 		0CF0498B20AD1CF0007B8A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0498920AD1CF0007B8A2E /* Main.storyboard */; };
 		0CF0498D20AD1CF0007B8A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0498C20AD1CF0007B8A2E /* Assets.xcassets */; };
 		0CF0499020AD1CF0007B8A2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF0498E20AD1CF0007B8A2E /* LaunchScreen.storyboard */; };
-		0CF0499820AD1D60007B8A2E /* SLBaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0499720AD1D60007B8A2E /* SLBaseTextField.swift */; };
-		0CF0499B20AD1F49007B8A2E /* SLNoitificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0499A20AD1F49007B8A2E /* SLNoitificationManager.swift */; };
+		0CF049A020AD300C007B8A2E /* SLRestrainEmojiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0499F20AD300C007B8A2E /* SLRestrainEmojiManager.swift */; };
+		0CF049A220AD3802007B8A2E /* SLVerifyEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF049A120AD3802007B8A2E /* SLVerifyEmoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		0CF0498C20AD1CF0007B8A2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CF0498F20AD1CF0007B8A2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CF0499120AD1CF0007B8A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CF0499720AD1D60007B8A2E /* SLBaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLBaseTextField.swift; sourceTree = "<group>"; };
-		0CF0499A20AD1F49007B8A2E /* SLNoitificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLNoitificationManager.swift; sourceTree = "<group>"; };
+		0CF0499F20AD300C007B8A2E /* SLRestrainEmojiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLRestrainEmojiManager.swift; sourceTree = "<group>"; };
+		0CF049A120AD3802007B8A2E /* SLVerifyEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLVerifyEmoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				0CF0498520AD1CF0007B8A2E /* AppDelegate.swift */,
 				0CF0498720AD1CF0007B8A2E /* ViewController.swift */,
-				0CF0499920AD1F11007B8A2E /* BaseTextField */,
+				0CF0499E20AD300B007B8A2E /* SLRestrainEmojiManager */,
 				0CF0498920AD1CF0007B8A2E /* Main.storyboard */,
 				0CF0498C20AD1CF0007B8A2E /* Assets.xcassets */,
 				0CF0498E20AD1CF0007B8A2E /* LaunchScreen.storyboard */,
@@ -69,13 +69,13 @@
 			path = SLRestrainEmoji;
 			sourceTree = "<group>";
 		};
-		0CF0499920AD1F11007B8A2E /* BaseTextField */ = {
+		0CF0499E20AD300B007B8A2E /* SLRestrainEmojiManager */ = {
 			isa = PBXGroup;
 			children = (
-				0CF0499720AD1D60007B8A2E /* SLBaseTextField.swift */,
-				0CF0499A20AD1F49007B8A2E /* SLNoitificationManager.swift */,
+				0CF0499F20AD300C007B8A2E /* SLRestrainEmojiManager.swift */,
+				0CF049A120AD3802007B8A2E /* SLVerifyEmoji.swift */,
 			);
-			path = BaseTextField;
+			path = SLRestrainEmojiManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CF0498820AD1CF0007B8A2E /* ViewController.swift in Sources */,
-				0CF0499B20AD1F49007B8A2E /* SLNoitificationManager.swift in Sources */,
+				0CF049A220AD3802007B8A2E /* SLVerifyEmoji.swift in Sources */,
 				0CF0498620AD1CF0007B8A2E /* AppDelegate.swift in Sources */,
-				0CF0499820AD1D60007B8A2E /* SLBaseTextField.swift in Sources */,
+				0CF049A020AD300C007B8A2E /* SLRestrainEmojiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,3 +7,28 @@
 //
 
 import Foundation
+
+struct SLVerifyEmoji {
+    
+    static func isContainEmoji(_ str: String?) -> Bool{
+        
+        var returenValue : Bool = false
+        
+        if str == nil {
+            returenValue = false
+            return returenValue
+        }
+        
+        for item in str!.enumerated() {
+            print(item.element.unicodeScalars)
+            switch item.element.unicodeScalars {
+            default:
+                break
+            }
+            
+        }
+        
+        return returenValue
+    }
+    
+}
