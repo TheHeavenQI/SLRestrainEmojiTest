@@ -17,6 +17,28 @@ class SLRestrainEmojiManager: NSObject {
         return Once.manager;
     }
     
+    var emojiArr:[NSNumber]! {
+        get{
+            if arr != nil {
+                return arr
+            }else {
+                let path = Bundle.main.path(forResource: "SLEmoji", ofType: "plist")
+                let arr1 : [NSNumber]? = NSArray.init(contentsOfFile: path!) as? [NSNumber]
+                
+                arr = arr1
+                return arr1
+            }
+            
+        }
+    }
+    
+    private var arr : [NSNumber]?
+    
+    override init() {
+        super.init()
+        
+    }
+    
     var isEnabled : Bool? {
         didSet{ setIsEnabled() }
     }
@@ -42,7 +64,6 @@ class SLRestrainEmojiManager: NSObject {
 // registerNotification
 extension SLRestrainEmojiManager {
     
-    
     private func register() {
         // 注册之前先清除, 避免多次注册
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UITextFieldTextDidChange, object: nil)
@@ -50,8 +71,6 @@ extension SLRestrainEmojiManager {
         
         NotificationCenter.default.addObserver(self, selector: #selector(textField2TextChange(noti:)), name: Notification.Name.UITextFieldTextDidChange, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(textField2TextChange(noti:)), name: Notification.Name.UITextViewTextDidChange, object: nil)
-        
-        
         
     }
     
@@ -65,11 +84,13 @@ extension SLRestrainEmojiManager {
         
         switch noti.object {
         case let textField as UITextField :
-            SLVerifyEmoji.isContainEmoji(textField.text)
-            print(textField.text)
+            let isContain : Bool = SLVerifyEmoji.isContainEmoji(textField.text)
+            if isContain {
+                textField.text = SLVerifyEmoji.replceEmoji(textField.text ?? "")
+            }
             break
         case let textView as UITextView :
-            print(textView.text)
+            textView.text = SLVerifyEmoji.replceEmoji(textView.text ?? "")
             break
         default:
             break
