@@ -90,7 +90,10 @@ extension SLRestrainEmojiManager {
             }
             break
         case let textView as UITextView :
-            textView.text = SLVerifyEmoji.replceEmoji(textView.text ?? "")
+            let isContain : Bool = SLVerifyEmoji.isContainEmoji(textView.text)
+            if isContain {
+                textView.text = SLVerifyEmoji.replceEmoji(textView.text ?? "")
+            }
             break
         default:
             break
